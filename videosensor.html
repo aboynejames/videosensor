@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html  lang="en"> <!--manifest="videosensor.appcache"-->
+<head>
+	<meta charset="utf-8">
+	<title>HTML5 video sensor</title>
+	<link rel="stylesheet" media="screen" href="videostyle.css" >
+		<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+		<script type="text/javascript" src="js/pouchdb-1.1.0.min.js"></script>
+		<script type="text/javascript" src="js/IndexedDBShim.min.js"></script>
+		<script type="text/javascript" src="videocontrol.js"></script>
+		<script type="text/javascript" src="pouchdbutility.js"></script>
+
+</head>
+<body>
+
+	<video id="one" controls preload="auto"  width="600" height="250" >
+		<source src="video/r-50-bk-heat.mp4" type="video/mp4" />
+	  <p>Your browser does not support the video tag.</p>
+	</video>
+	
+	<div id="swim-one-data" >
+		<div>
+		<div id="Activity" >50metre Backcrawl Scottih Dec 2013 Heat</div><div id="time-header"  class="analysis-focus">Time</div><div id="timeset"  class="analysis-focus" >00.30.18</div><div id="stroke-count"  class="analysis-focus">Stroke Count</div><div id="strokenmber-set"  class="analysis-focus">30</div><div id="distance-under"  class="analysis-focus">Underwater</div><div id="underwater-set"  class="analysis-focus">24</div>
+		</div>
+		<div>
+			<div id="Activity">0-25 metre analysis</div><div id="time-header"  class="analysis-focus">Time</div><div id="timeset"  class="analysis-focus">00.14.77</div><div id="stroke-count"  class="analysis-focus">Stroke Count</div><div id="strokenmber-set"  class="analysis-focus" >13</div><div id="distance-under"  class="analysis-focus">Underwater</div><div id="underwater-set"  class="analysis-focus">13</div>
+		</div>
+			<div id="Activity">25-50 metre analysis</div><div id="time-header"  class="analysis-focus">Time</div><div id="timeset"  class="analysis-focus">00.15.41</div><div id="stroke-count"  class="analysis-focus">Stroke Count</div><div id="strokenmber-set"  class="analysis-focus" >17</div><div id="distance-under"  class="analysis-focus">Underwater</div><div id="underwater-set"  class="analysis-focus">11</div>
+		</div>
+
+		<div>
+			<div id="Activity">5 metre analysis</div><div id="time-header"  class="analysis-focus">Time</div><div id="timeset"  class="analysis-focus">00.02.54</div><div id="stroke-count"  class="analysis-focus">Stroke Count</div><div id="strokenmber-set"  class="analysis-focus">0</div><div id="distance-under"  class="analysis-focus">Underwater</div><div id="underwater-set"  class="analysis-focus">5</div>
+			<div id="time-header"  class="analysis-focus">Time</div><div id="timeset"  class="analysis-focus">00.3.04</div><div id="stroke-count"  class="analysis-focus">Stroke Count</div><div id="strokenmber-set"  class="analysis-focus">0</div><div id="distance-under"  class="analysis-focus">Underwater</div><div id="underwater-set"  class="analysis-focus">5</div>
+			<div id="time-header"  class="analysis-focus">Time</div><div id="timeset"  class="analysis-focus">00.03.31</div><div id="stroke-count"  class="analysis-focus">Stroke Count</div><div id="strokenmber-set"  class="analysis-focus"></div><div id="distance-under"  class="analysis-focus">Underwater</div><div id="underwater-set"  class="analysis-focus">3</div>
+			<div id="time-header"  class="analysis-focus">Time</div><div id="timeset"  class="analysis-focus">00.03.15</div><div id="stroke-count"  class="analysis-focus">Stroke Count</div><div id="strokenmber-set"  class="analysis-focus">45</div><div id="distance-under"  class="analysis-focus">Underwater</div><div id="underwater-set"  class="analysis-focus">0</div>
+			<div id="time-header"  class="analysis-focus">Time</div><div id="timeset"  class="analysis-focus">00.03.59</div><div id="stroke-count"  class="analysis-focus">Stroke Count</div><div id="strokenmber-set"  class="analysis-focus">45</div><div id="distance-under"  class="analysis-focus">Underwater</div><div id="underwater-set"  class="analysis-focus">0</div>
+			<div id="time-header"  class="analysis-focus">Time</div><div id="timeset"  class="analysis-focus">00.02.27</div><div id="stroke-count"  class="analysis-focus">Stroke Count</div><div id="strokenmber-set"  class="analysis-focus">45</div><div id="distance-under"  class="analysis-focus">Underwater</div><div id="underwater-set"  class="analysis-focus">5</div>
+			<div id="time-header"  class="analysis-focus">Time</div><div id="timeset"  class="analysis-focus">00.03.19</div><div id="stroke-count"  class="analysis-focus">Stroke Count</div><div id="strokenmber-set"  class="analysis-focus">45</div><div id="distance-under"  class="analysis-focus">Underwater</div><div id="underwater-set"  class="analysis-focus">5</div>
+			<div id="time-header"  class="analysis-focus">Time</div><div id="timeset"  class="analysis-focus">00.03.31</div><div id="stroke-count"  class="analysis-focus">Stroke Count</div><div id="strokenmber-set"  class="analysis-focus">45</div><div id="distance-under"  class="analysis-focus">Underwater</div><div id="underwater-set"  class="analysis-focus">1</div>
+			<div id="time-header"  class="analysis-focus">Time</div><div id="timeset"  class="analysis-focus">00.03.09</div><div id="stroke-count"  class="analysis-focus">Stroke Count</div><div id="strokenmber-set"  class="analysis-focus">45</div><div id="distance-under"  class="analysis-focus">Underwater</div><div id="underwater-set"  class="analysis-focus">0</div>
+			<div id="time-header"  class="analysis-focus">Time</div><div id="timeset"  class="analysis-focus">00.03.68</div><div id="stroke-count"  class="analysis-focus">Stroke Count</div><div id="strokenmber-set"  class="analysis-focus">45</div><div id="distance-under"  class="analysis-focus">Underwater</div><div id="underwater-set"  class="analysis-focus">0</div>
+		</div>
+	</div>
+	
+	<video id="two" controls preload="auto"  width="600" height="250" >
+		<source src="http://localhost/ll/videosensor/video/r-50-bk-finalb.mp4" />
+	  <p>Your browser does not support the video tag.</p>
+	</video>
+	
+	<p id="controls">
+		<input type="button" id="play" value="play">
+		<span id="position">00:00</span> / <span id="duration">loading...</span>
+		<input type="range" value="0" id="scrub" />
+		<a href="" id="50slowmotion">50% slow </a><a href="" id="25slowmotion">25% slow </a><a href="" id="normalmotion">Normal </a>
+		</p>
+		<div id="swim-one-data" >
+		<div>
+		<div id="Activity" >50metre Backcrawl Scottih Dec 2013 Final</div><div id="time-header"  class="analysis-focus">Time</div><div id="timeset"  class="analysis-focus" >00.30.41</div><div id="stroke-count"  class="analysis-focus">Stroke Count</div><div id="strokenmber-set"  class="analysis-focus">45</div><div id="distance-under"  class="analysis-focus">Underwater</div><div id="underwater-set"  class="analysis-focus">30</div>
+		</div>
+		<div>
+			<div id="Activity">0-25 metre analysis</div><div id="time-header"  class="analysis-focus">Time</div><div id="timeset"  class="analysis-focus">00.15.08</div><div id="stroke-count"  class="analysis-focus">Stroke Count</div><div id="strokenmber-set"  class="analysis-focus" >14</div><div id="distance-under"  class="analysis-focus">Underwater</div><div id="underwater-set"  class="analysis-focus">12</div>
+		</div>
+			<div id="Activity">25-50 metre analysis</div><div id="time-header"  class="analysis-focus">Time</div><div id="timeset"  class="analysis-focus">00.15.33</div><div id="stroke-count"  class="analysis-focus">Stroke Count</div><div id="strokenmber-set"  class="analysis-focus" >16</div><div id="distance-under"  class="analysis-focus">Underwater</div><div id="underwater-set"  class="analysis-focus">11</div>
+		</div>
+
+		<div>
+			<div id="Activity">5 metre analysis</div><div id="time-header"  class="analysis-focus">Time</div><div id="timeset"  class="analysis-focus">00.02.76</div><div id="stroke-count"  class="analysis-focus">Stroke Count</div><div id="strokenmber-set"  class="analysis-focus">0</div><div id="distance-under"  class="analysis-focus">Underwater</div><div id="underwater-set"  class="analysis-focus">5</div>
+						<div id="time-header"  class="analysis-focus">Time</div><div id="timeset"  class="analysis-focus">00.02.76</div><div id="stroke-count"  class="analysis-focus">Stroke Count</div><div id="strokenmber-set"  class="analysis-focus">0</div><div id="distance-under"  class="analysis-focus">Underwater</div><div id="underwater-set"  class="analysis-focus">5</div>
+			<div id="time-header"  class="analysis-focus">Time</div><div id="timeset"  class="analysis-focus">00.03.56</div><div id="stroke-count"  class="analysis-focus">Stroke Count</div><div id="strokenmber-set"  class="analysis-focus"></div><div id="distance-under"  class="analysis-focus">Underwater</div><div id="underwater-set"  class="analysis-focus">2</div>
+			<div id="time-header"  class="analysis-focus">Time</div><div id="timeset"  class="analysis-focus">00.03.21</div><div id="stroke-count"  class="analysis-focus">Stroke Count</div><div id="strokenmber-set"  class="analysis-focus">45</div><div id="distance-under"  class="analysis-focus">Underwater</div><div id="underwater-set"  class="analysis-focus">0</div>
+			<div id="time-header"  class="analysis-focus">Time</div><div id="timeset"  class="analysis-focus">00.03.67</div><div id="stroke-count"  class="analysis-focus">Stroke Count</div><div id="strokenmber-set"  class="analysis-focus">45</div><div id="distance-under"  class="analysis-focus">Underwater</div><div id="underwater-set"  class="analysis-focus">0</div>
+			<div id="time-header"  class="analysis-focus">Time</div><div id="timeset"  class="analysis-focus">00.02.18</div><div id="stroke-count"  class="analysis-focus">Stroke Count</div><div id="strokenmber-set"  class="analysis-focus">45</div><div id="distance-under"  class="analysis-focus">Underwater</div><div id="underwater-set"  class="analysis-focus">5</div>
+			<div id="time-header"  class="analysis-focus">Time</div><div id="timeset"  class="analysis-focus">00.02.98</div><div id="stroke-count"  class="analysis-focus">Stroke Count</div><div id="strokenmber-set"  class="analysis-focus">45</div><div id="distance-under"  class="analysis-focus">Underwater</div><div id="underwater-set"  class="analysis-focus">5</div>
+			<div id="time-header"  class="analysis-focus">Time</div><div id="timeset"  class="analysis-focus">00.03.24</div><div id="stroke-count"  class="analysis-focus">Stroke Count</div><div id="strokenmber-set"  class="analysis-focus">45</div><div id="distance-under"  class="analysis-focus">Underwater</div><div id="underwater-set"  class="analysis-focus">1</div>
+			<div id="time-header"  class="analysis-focus">Time</div><div id="timeset"  class="analysis-focus">00.03.48</div><div id="stroke-count"  class="analysis-focus">Stroke Count</div><div id="strokenmber-set"  class="analysis-focus">45</div><div id="distance-under"  class="analysis-focus">Underwater</div><div id="underwater-set"  class="analysis-focus">0</div>
+			<div id="time-header"  class="analysis-focus">Time</div><div id="timeset"  class="analysis-focus">00.03.21</div><div id="stroke-count"  class="analysis-focus">Stroke Count</div><div id="strokenmber-set"  class="analysis-focus">45</div><div id="distance-under"  class="analysis-focus">Underwater</div><div id="underwater-set"  class="analysis-focus">0</div>
+		</div>
+	</div>
+	
+
+</body>
+</html>

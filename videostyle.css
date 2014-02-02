@@ -1,0 +1,50 @@
+html {overflow:-moz-scrollbars-vertical !important;}
+
+/* Body */
+	body {
+		background: #F5F4EF; /*url('../images/bg.png')*/
+		color: #000305;
+		font-size: 14px; 
+		font-family: 'Trebuchet MS', Trebuchet, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+		line-height: 1.429;
+		margin: 0;
+		padding: 0;
+		text-align: left;
+	}
+
+
+	
+/* HTML5 tags */
+header, section, footer,
+aside, nav, article, figure {
+	display: block;
+}
+
+/**
+*
+* Clear any float elements
+*
+*/
+.clear {clear: both;}
+
+/**
+*
+* Welcome message
+*
+*/
+ #welcome {
+	margin: auto;
+	width:100%;
+	text-align:center;
+	
+}
+
+#Activity {
+	font-weight:bold;
+}
+
+.analysis-focus {
+	display:inline;
+	margin: 6px;
+
+}
